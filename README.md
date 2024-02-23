@@ -1,24 +1,28 @@
-# creacion de una base de datos postgres
+# mini proyecto usando docker, ts, postgres
+## repositorio
+https://github.com/Jviejo/ts-2024-pg
+
+## creacion de una base de datos postgres
 ```sh
 docker run -d -p 5432:5432 -e POSTGRES_PASSWORD=pwd postgres
 
 docker logs a511
 ```
-# Comprobar que nos podemos conectar con una herramienta (Dbeaver)
+## Comprobar que nos podemos conectar con una herramienta (Dbeaver)
 https://dbeaver.io/download/
 
 
-# Carga de la base de datos Nortwind dentro de postgres
+## Carga de la base de datos Nortwind dentro de postgres
 https://raw.githubusercontent.com/pthom/northwind_psql/master/northwind.sql
 
-# crear el package.json e instalar el pg (driver de postgres)
+## crear el package.json e instalar el pg (driver de postgres)
 ```
 npm i pg @types/pg
 
 npx nodemon --exec npx ts-node index.ts
 ```
 
-# programa en TS que haga queries a la base de datos
+## programa en TS que haga queries a la base de datos
 ```ts
 import { ClientConfig, Pool } from "pg";
 
